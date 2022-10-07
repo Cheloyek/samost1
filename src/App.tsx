@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 // import CounterClicks  from "./CounterClisks";
 import Button from "./Button";
+import InputValue from "./InputValue";
 
 function App() {
     //максимальное значение
@@ -46,6 +47,7 @@ function App() {
   return (
     <div className="App">
         <div className="counter">Счетчик до {MAXVALUE}: <span style={countColorStyle}>{counter}</span></div>
+            <InputValue />
             <Button name={"inc"} isDisabled={isAddButtonDisabled} callback={clickCounter}/>
             <Button name={"reset"} isDisabled={isResetButtonDisabled} callback={resetCounter}/>
     </div>
