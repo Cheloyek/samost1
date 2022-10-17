@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Simulate} from "react-dom/test-utils";
 import click = Simulate.click;
+import {Input} from "./Input";
 
 
 
@@ -17,6 +18,7 @@ import click = Simulate.click;
 const CounterClicks = () => {
     let [clicks, setClicks] = useState(0)
 
+
     const clickCounter = () => {
         if (clicks < 5) {
             setClicks(++clicks)
@@ -29,11 +31,15 @@ const CounterClicks = () => {
 
     return (
         <div>
-            <div></div>
-            <div>Счетчик: {clicks}</div>
-            <button onClick={clickCounter}>inc</button>
-            <button onClick={resetButton}>reset</button>
+            <div className={'mainCounter'}>
+                <div className={clicks < 5 ? 'counterNumber' : 'counterIsDone'}>{clicks}</div>
+                <div className='buttonMain'>
+                    <button onClick={clickCounter} className={'button'} disabled={clicks < 5 ? false : true}>inc</button>
+                    <button onClick={resetButton} className={'button'} disabled={clicks < 1 ? true : false}>reset</button>
+                </div>
+            </div>
         </div>
+
     )
 }
 
