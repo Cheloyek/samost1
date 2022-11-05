@@ -59,3 +59,9 @@
 .inputValue {
   margin: 10px;
 }
+
+.inputError {
+  margin: 10px;
+  color: #ff0303;
+  border-color: #ff0303;
+}
