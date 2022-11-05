@@ -4,11 +4,12 @@ import './App.css';
 import CounterClicks  from "./CounterClisks";
 import {Input} from "./Input";
 import {Button} from "./Button";
+import CounterClisks from "./CounterClisks";
 
-function App() {
+function App(props: any) {
   return (
     <div className="App">
-      <CounterClicks/>
+        <CounterClisks startValue={} maxValue={} />
       <div className={'mainInput'}>
         <Input title={'max value'} value={5}/>
         <Input title={'start value'} value={1}/>
