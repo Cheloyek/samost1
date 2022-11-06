@@ -65,3 +65,10 @@
   color: #ff0303;
   border-color: #ff0303;
 }
+
+.localStorage {
+  border: 2px #12fd01 solid;
+  margin: 50px;
+  padding: 10px;
+  color: #00ff48;
+}
